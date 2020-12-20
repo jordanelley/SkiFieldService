@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Ski_App_Application;
+using Ski_App_Service.Contracts;
 
 namespace Ski_App_Service.Controllers.API
 {
@@ -19,9 +19,9 @@ namespace Ski_App_Service.Controllers.API
         }
 
         [HttpPost]
-        public void AddNewSkiFieldReview([FromBody]string review)
+        public void AddNewSkiFieldReview(SkiFieldReviewModel model)
         {
-            _skiFieldsRepository.Add(review);
+            _skiFieldsRepository.Add(model.Name+" "+model.Review);
         }
         [HttpGet]
         public Task<List<string>> GetSkiFieldReviews(string review)
