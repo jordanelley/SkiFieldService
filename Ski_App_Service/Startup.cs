@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Ski_App_Application;
+using Ski_App_Repositories.InMemoryRepositories;
 
 namespace Ski_App_Service
 {
@@ -24,6 +26,7 @@ namespace Ski_App_Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddScoped<ISkiFieldsRepository, SkiFieldsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

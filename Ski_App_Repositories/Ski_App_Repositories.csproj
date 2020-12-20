@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="InMemoryRepositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ski_App_Application\Ski_App_Application.csproj" />
+  </ItemGroup>
+</Project>

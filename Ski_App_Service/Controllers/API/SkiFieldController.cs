@@ -2,25 +2,31 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Ski_App_Application;
+
 namespace Ski_App_Service.Controllers.API
 {
-    [Route("addSkiField")] 
+    [Route("reviews")] 
     [ApiController]
 
     public class SkiFieldController
     {
-        private readonly List<string> _skiFieldReviews = new List<string>();
+        private readonly ISkiFieldsRepository _skiFieldsRepository;
 
+        public SkiFieldController(ISkiFieldsRepository skiFieldsRepository)
+        {
+            _skiFieldsRepository = skiFieldsRepository;
+        }
 
         [HttpPost]
-        public void AddNewSkiFieldReview(string review)
+        public void AddNewSkiFieldReview([FromBody]string review)
         {
-            _skiFieldReviews.Add(review);
+            _skiFieldsRepository.Add(review);
         }
         [HttpGet]
-        public List<string> GetSkiFieldReviews(string review)
+        public Task<List<string>> GetSkiFieldReviews(string review)
         {
-            return _skiFieldReviews;
+            return _skiFieldsRepository.GetAll();
         }
     }
 }
