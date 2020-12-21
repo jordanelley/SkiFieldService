@@ -27,8 +27,6 @@ namespace Ski_App_Service.Controllers.API
         public Task<List<string>> GetSkiFieldReviews(string review)
         {
             return _skiFieldsRepository.GetAll();
-            //returns stub data since memory keeps wiping each request
-            //return new List<string>{"Ski field 1", "Ski field 2"};
         }
     }
 }
