@@ -24,7 +24,7 @@ namespace Ski_App_Service.Controllers.API
             return _skiFieldsRepository.Add(model.Name+" "+model.Review);
         }
         [HttpGet]
-        public Task<List<string>> GetSkiFieldReviews(string review)
+        public Task<List<string>> GetSkiFieldReviews()
         {
             return _skiFieldsRepository.GetAll();
         }

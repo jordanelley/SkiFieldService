@@ -13,10 +13,17 @@ namespace Ski_App_Service_Tests
         public async Task ShouldAddSkiField()
         {
             var skiFieldController = new SkiFieldController(new SkiFieldsRepository());
-            await skiFieldController.AddNewSkiFieldReview(new SkiFieldReviewModel());
-            //check that i got back what I added
-           //add a ski field
-           //check its added
+            
+            var skiFieldReviewModel = new SkiFieldReviewModel
+            {
+                Name = "Cadrona",
+                Review = "good"
+            };
+
+            await skiFieldController.AddNewSkiFieldReview(skiFieldReviewModel);
+            var reviews = await skiFieldController.GetSkiFieldReviews();
+            
+            Assert.Equal("Cadrona good", reviews[0]);
         }
     }
 }
