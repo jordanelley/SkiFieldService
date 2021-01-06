@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Ski_App_Application;
-using Ski_App_Service.Contracts;
+using Ski_App_Service.Models;
+using Ski_App_Service.Models.Contracts;
 
 namespace Ski_App_Service.Controllers.API
 {
