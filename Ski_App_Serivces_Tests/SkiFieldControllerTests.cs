@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Ski_App_Repositories.InMemoryRepositories;
-using Ski_App_Service.Contracts;
+using Ski_App_Service.Models.Contracts;
 using Ski_App_Service.Controllers.API;
 using Xunit;
 

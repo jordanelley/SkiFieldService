@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -14,15 +15,18 @@ namespace Ski_App_Service.Controllers.API
     public class SkiFieldController
     {
         private readonly ISkiFieldsRepository _skiFieldsRepository;
+        private readonly IMapper _mapper;
 
-        public SkiFieldController(ISkiFieldsRepository skiFieldsRepository)
+        public SkiFieldController(ISkiFieldsRepository skiFieldsRepository, IMapper mapper)
         {
             _skiFieldsRepository = skiFieldsRepository;
+            _mapper = mapper;
         }
 
         [HttpPost]
         public Task AddNewSkiFieldReview(SkiFieldReviewModel model)
         {
+            var review = _mapper.Map<SkiFieldReview>(model);
             return _skiFieldsRepository.Add(model.Name+" "+model.Review);
         }
         [HttpGet]
