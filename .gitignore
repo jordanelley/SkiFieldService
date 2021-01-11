@@ -135,3 +135,12 @@ Ski_App_Service_Tests/obj/Ski_App_Service_Tests.csproj.nuget.g.targets
 Ski_App_Service_Tests/obj/Debug/net48/.NETFramework,Version=v4.8.AssemblyAttributes.cs
 Ski_App_Service_Tests/obj/Debug/net48/Ski_App_Service_Tests.assets.cache
 Ski_App_Service_Tests/obj/Debug/net48/Ski_App_Service_Tests.csproj.FileListAbsolute.txt
+Ski_App_Service.sln.DotSettings.user
+Ski_App_Serivces_Tests/bin/Debug/net5.0/appsettings.Development.json
+Ski_App_Serivces_Tests/bin/Debug/net5.0/appsettings.json
+Ski_App_Serivces_Tests/bin/Debug/net5.0/Ski_App_Application.dll
+Ski_App_Serivces_Tests/bin/Debug/net5.0/Ski_App_Application.pdb
+Ski_App_Serivces_Tests/bin/Debug/net5.0/Ski_App_Repositories.dll
+Ski_App_Serivces_Tests/bin/Debug/net5.0/Ski_App_Repositories.pdb
+Ski_App_Serivces_Tests/bin/Debug/net5.0/Ski_App_Service.dll
+Ski_App_Serivces_Tests/bin/Debug/net5.0/Ski_App_Service.pdb
