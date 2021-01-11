@@ -1,4 +1,4 @@
-namespace Ski_App_Service.Models
+namespace Ski_App_Repositories.Models
 {
     public class SkiFieldReview
     {
